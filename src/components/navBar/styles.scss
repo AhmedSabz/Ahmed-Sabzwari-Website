@@ -1,0 +1,85 @@
+.navbar {
+    background-color: var(--yellow-theme-nav-background-color);
+    height: 100px; /* Increased height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem; /* Increased font size */
+    position: sticky;
+    &__container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: inherit;
+        padding: 0px 30px; /* Increased padding */
+        flex: 1;
+        &__logo {
+            color: var(--yellow-theme-main-color);
+            cursor: pointer;
+        }
+        &__menu {
+            display: flex;
+            list-style: none;
+            text-align: center;
+            &__item {
+                line-height: 50px; /* Increased line height */
+                margin-right: 2rem; /* Increased margin */
+                font-size: 1.8rem; /* Increased font size */
+                &::after {
+                    content: '';
+                    display: block;
+                    height: 4px; /* Increased height */
+                    width: 0;
+                    background: transparent;
+                    transition: all 0.5s ease;
+                }
+                &:hover::after {
+                    width: 100%;
+                    background: var(--yellow-theme-main-color);
+                }
+                &__links {
+                    color: var(--yellow-theme-main-color);
+                    text-decoration: none;
+                    padding: 0.7rem; /* Increased padding */
+                }
+            }
+        }
+    }
+}
+
+.nav-icon {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar__container__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        top: 100px; /* Adjusted to match new navbar height */
+        left: -110%;
+        opacity: 1;
+        transition: all 0.5s ease;
+
+        &.active {
+            background: #181818;
+            left: 0px;
+            opacity: 1;
+        }
+
+        &__item {
+            border-bottom: 1px solid #282828;
+            margin: 0px;
+            padding: 25px 0px; /* Increased padding */
+        }
+    }
+
+    .nav-icon {
+        display: block;
+        cursor: pointer;
+        color: var(--yellow-theme-main-color);
+        padding-right: 30px; /* Increased padding */
+    }
+}
