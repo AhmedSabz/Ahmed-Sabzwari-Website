@@ -80,7 +80,7 @@ export const skillsData= [
             percentage: "95",
         },
         {
-            skillName: "IDEs(Visual Studio, Eclipse, Netbeans",
+            skillName: "IDEs(Visual Studio, Eclipse, Netbeans)",
             percentage: "90",
         },
         {

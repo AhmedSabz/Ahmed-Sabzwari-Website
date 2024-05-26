@@ -5,7 +5,7 @@
     justify-content: center;
     align-content: center;
     flex-direction: column;
-
+    background: #0055A2;
     &__text-wrapper {
         display: flex;
         justify-content: center;
@@ -36,7 +36,7 @@
             padding: 10px 70px;
             font-size: 2rem;
             background: transparent;
-            color: var(--yellow-theme-main-color);
+            color: var(--yellow-theme-sub-text-color);
             border: 1.5px solid var(--yellow-theme-main-color);
             border-radius: 4px;
             font-weight: 500;
@@ -45,7 +45,7 @@
 
             &:hover {
                 background: var(--yellow-theme-main-color);
-                color: #000000;
+                color: #eaeef3;
             }
         }
     }
