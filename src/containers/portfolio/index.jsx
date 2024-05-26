@@ -1,90 +1,4 @@
-// import React from "react";
-// import {BsInfoCircleFill} from 'react-icons/bs'
-// import PageHeaderContent from "../../components/pageHeaderContent"
-// import ImageOne from '../../images/image1.jpg'
-// import ImageTwo from '../../images/image2.png'
-// import ImageThree from '../../images/image3.png'
-// import "./styles.scss"
-// import { useState } from "react";
-// const portfolioData =[
-//     {
-//         id: 3,
-//         name: "Robotics",
-//         image: ImageOne
-//     },
-//     {
-//         id: 2,
-//         name: "SJSU",
-//         image: ImageTwo
-//     },
-//     {
-//         id: 2,
-//         name: "Web",
-//         image: ImageThree
-//     },
-// ]
-// const filterData = [
-//     {
-//         filterId: 1 ,
-//         label: 'All'
-//     },
-//     {
-//         filterId: 2 ,
-//         label: 'Software Development'
-//     },
-//     {
-//         filterId: 3 ,
-//         label: 'Embedded Design'
-//     },
-    
-// ]
-// const Portfolio = ()=>{
 
-//     const[filterdvalue,setFilteredValue]=useState(1)
-//     function handleFilter(currentId){
-//         setFilteredValue(currentId)
-//     };
-//     const fileteredItems= filteredvalue === 1 ? portfolioData : portfolioData.filter(item=>item.id === filteredValue)
-
-//     return(
-//         <section id="portfolio" className="portfolio">
-//         <PageHeaderContent
-//         headerText= "My Portfolio"
-//         icon={<BsInfoCircleFill size={40} />}
-//         />
-//         <div className="portfolio__content">
-//             <ul className="portfolio__content__filter">
-//                 {
-//                     filterData.map(item=>(
-//                         <li onClick={()=>handleFilter(item.fiterId)} key={item.filterId}>
-//                                 {
-//                                     item.label
-//                                 }
-//                         </li>
-//                     ))
-//                 }
-//             </ul>
-//                 <div className="portfolio__content__cards">
-//                     {
-//                         filteredItems.map((item)=>(
-//                             <div className="portfolio__content__cards__item" key={`cardItem${item.name.trim()}`}>
-//                                 <div className="portfolio__content__cards__item__img-wrapper">
-//                                     <a>
-//                                         <img alt="dummy data" src={item.image}/>
-
-                                        
-//                                     </a>
-//                                 </div>
-//                             </div>
-//                         ))
-//                     }
-
-//                 </div>
-//         </div>
-//     </section>
-//     )
-// }
-// export default Portfolio;
 import React, { useState } from "react";
 import { BsInfoCircleFill } from 'react-icons/bs';
 import PageHeaderContent from "../../components/pageHeaderContent";
@@ -120,7 +34,7 @@ const portfolioData = [
         id: 2,
         name: "Ahmed Sabzwari's Website",
         image: ImageThree,
-        link: ''
+        link: 'https://github.com/AhmedSabz/Ahmed-Sabzwari-Website'
     },
     {
         id: 2,
