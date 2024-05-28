@@ -1,83 +1,17 @@
-// import React from "react";
-// import {BsInfoCircleFill} from 'react-icons/bs'
-// import PageHeaderContent from "../../components/pageHeaderContent"
-// import { Animate } from "react-simple-animate";
-// import './styles.scss'
-// const Contact = ()=>{
-//     return(
-//         <section id="contact" className="contact">
-//         <PageHeaderContent
-//         headerText= "My Contact"
-//         icon={<BsInfoCircleFill size={40} />}
-        
-//         />
-//         <div className="contact__content">
-//         <Animate
-//         play
-//         duration={1}
-//         delay={0}
-//         start ={{
-//             transform: "translateX(-200px)"
-//         }}
-//         end={{
-//             transform: "translateX(0px)"
-//         }}>
-//             <h3 className="contact__content__header-text">
-//                Let's Talk 
-//             </h3>
-
-//         </Animate>
-//         <Animate
-//         play
-//         duration={1}
-//         delay={0}
-//         start ={{
-//             transform: "translateX(200px)"
-//         }}
-//         end={{
-//             transform: "translateX(0px)"
-//         }}>
-//             <div className="contact__content__form">
-//                 <div className= "contact__content__form__controlswrapper">
-//                     <div>
-//                     <input required name="name" className= "inputName" type={'text'}/>
-//                     <label htmlFor="name" className="nameLabel">Name</label>
-//                     </div>
-
-//                     <div>
-//                     <input required name="email" className= "inputEmail" type={'text'}/>
-//                     <label htmlFor="email" className="emailLabel">Email</label>
-
-//                     </div>
-
-//                     <div>
-//                     <textarea required name="description" className= "inputDescription" type={'text'} rows="5"/>
-//                     <label htmlFor="description" className="descriptionLabel">Description</label>
-
-//                     </div>
-//                 </div>
-//                 <button>Submit</button>
-
-//             </div>
-//             </Animate>
-
-
-//         </div>
-//     </section>
-//     )
-// }
-// export default Contact;
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { BsInfoCircleFill } from 'react-icons/bs';
 import PageHeaderContent from "../../components/pageHeaderContent";
 import { Animate } from "react-simple-animate";
 import './styles.scss';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const form = useRef();
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        description: ''
+        from_name: '',
+        from_email: '',
+        message: '',
+        to_name: 'EmailJS team' // You can set this to a fixed value or make it dynamic
     });
 
     const handleChange = (e) => {
@@ -88,25 +22,20 @@ const Contact = () => {
         }));
     };
 
-    const handleSubmit = async (e) => {
+    const sendEmail = (e) => {
         e.preventDefault();
-        try {
-            const response = await fetch('http://localhost:5000/send', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
-            const result = await response.json();
-            if (response.ok) {
-                alert('Email sent successfully!');
-            } else {
-                alert('Failed to send email: ' + result.error);
+    
+        emailjs.sendForm('service_yed3hte', 'template_zbv6z01', form.current, 'ooCBL0f1Tyy0xDBH0')
+          .then(
+            (result) => {
+              console.log('SUCCESS!', result.text);
+              alert('Email sent successfully!');
+            },
+            (error) => {
+              console.log('FAILED...', error.text);
+              alert('Failed to send email: ' + error.text);
             }
-        } catch (error) {
-            alert('Error: ' + error.message);
-        }
+          );
     };
 
     return (
@@ -140,41 +69,46 @@ const Contact = () => {
                     end={{
                         transform: "translateX(0px)"
                     }}>
-                    <form className="contact__content__form" onSubmit={handleSubmit}>
+                    <form className="contact__content__form" ref={form} onSubmit={sendEmail}>
                         <div className="contact__content__form__controlswrapper">
                             <div>
                                 <input
                                     required
-                                    name="name"
+                                    name="from_name"
                                     className="inputName"
                                     type="text"
-                                    value={formData.name}
+                                    value={formData.from_name}
                                     onChange={handleChange}
                                 />
-                                <label htmlFor="name" className="nameLabel">Name</label>
+                                <label htmlFor="from_name" className="nameLabel">Name</label>
                             </div>
                             <div>
                                 <input
                                     required
-                                    name="email"
+                                    name="from_email"
                                     className="inputEmail"
                                     type="text"
-                                    value={formData.email}
+                                    value={formData.from_email}
                                     onChange={handleChange}
                                 />
-                                <label htmlFor="email" className="emailLabel">Email</label>
+                                <label htmlFor="from_email" className="emailLabel">Email</label>
                             </div>
                             <div>
                                 <textarea
                                     required
-                                    name="description"
+                                    name="message"
                                     className="inputDescription"
                                     rows="5"
-                                    value={formData.description}
+                                    value={formData.message}
                                     onChange={handleChange}
                                 />
-                                <label htmlFor="description" className="descriptionLabel">Description</label>
+                                <label htmlFor="message" className="descriptionLabel">Description</label>
                             </div>
+                            <input
+                                type="hidden"
+                                name="to_name"
+                                value={formData.to_name}
+                            />
                         </div>
                         <button type="submit">Submit</button>
                     </form>

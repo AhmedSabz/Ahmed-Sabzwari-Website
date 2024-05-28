@@ -1,5 +1,6 @@
 .navbar {
    background: #0055A2;
+   font-size: 25px;
     height: 100px; /* Increased height */
     display: flex;
     justify-content: center;
@@ -54,25 +55,25 @@
 @media only screen and (max-width: 768px) {
     .navbar__container__menu {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         width: 100%;
         position: absolute;
-        top: 100px; /* Adjusted to match new navbar height */
+        top: 60px; /* Adjusted to match new navbar height */
         left: -110%;
         opacity: 1;
         transition: all 0.5s ease;
 
         &.active {
-            background: #181818;
+            background: #0055A2;
             left: 0px;
             opacity: 1;
         }
 
         &__item {
-            border-bottom: 1px solid #282828;
+            border-bottom: 1px solid #0055A2;
             margin: 0px;
-            padding: 25px 0px; /* Increased padding */
+            padding: 5px 0px; /* Increased padding */
         }
     }
 
