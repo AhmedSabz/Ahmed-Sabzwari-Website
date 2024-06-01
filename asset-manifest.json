@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Ahmed-Sabzwari-Website/static/css/main.62e3a13c.css",
-    "main.js": "/Ahmed-Sabzwari-Website/static/js/main.80052051.js",
-    "static/media/image1.jpg": "/Ahmed-Sabzwari-Website/static/media/image1.dbc18e818078adf16f45.jpg",
-    "static/media/image6.jpg": "/Ahmed-Sabzwari-Website/static/media/image6.5e076be67fad918a483b.jpg",
-    "static/media/image7.png": "/Ahmed-Sabzwari-Website/static/media/image7.ce176256d0f2ed26a473.png",
-    "static/media/image5.png": "/Ahmed-Sabzwari-Website/static/media/image5.b7a2badb8e0832848436.png",
-    "static/media/image2.png": "/Ahmed-Sabzwari-Website/static/media/image2.1f87b73511d764725856.png",
-    "static/media/image3.png": "/Ahmed-Sabzwari-Website/static/media/image3.01bf7a8165293639d43e.png",
-    "index.html": "/Ahmed-Sabzwari-Website/index.html",
-    "main.62e3a13c.css.map": "/Ahmed-Sabzwari-Website/static/css/main.62e3a13c.css.map",
-    "main.80052051.js.map": "/Ahmed-Sabzwari-Website/static/js/main.80052051.js.map"
+    "main.css": "/static/css/main.62e3a13c.css",
+    "main.js": "/static/js/main.2db47171.js",
+    "static/media/image1.jpg": "/static/media/image1.dbc18e818078adf16f45.jpg",
+    "static/media/image6.jpg": "/static/media/image6.5e076be67fad918a483b.jpg",
+    "static/media/image7.png": "/static/media/image7.ce176256d0f2ed26a473.png",
+    "static/media/image5.png": "/static/media/image5.b7a2badb8e0832848436.png",
+    "static/media/image2.png": "/static/media/image2.1f87b73511d764725856.png",
+    "static/media/image3.png": "/static/media/image3.01bf7a8165293639d43e.png",
+    "index.html": "/index.html",
+    "main.62e3a13c.css.map": "/static/css/main.62e3a13c.css.map",
+    "main.2db47171.js.map": "/static/js/main.2db47171.js.map"
   },
   "entrypoints": [
     "static/css/main.62e3a13c.css",
-    "static/js/main.80052051.js"
+    "static/js/main.2db47171.js"
   ]
 }
