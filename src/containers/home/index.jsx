@@ -46,8 +46,8 @@ const Home = () => {
             </div>
             <Animate
                 play
-                duration={2.5}
-                delay={2.5}
+                duration={1.5}
+                delay={0}
                 start={{ transform: 'translateY(550px)' }}
                 end={{ transform: 'translateY(0px)' }}
             >
