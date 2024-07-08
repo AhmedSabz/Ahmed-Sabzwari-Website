@@ -8,7 +8,7 @@ import ImageThree from '../../images/image3.png';
 import ImageFour from '../../images/image4.jpg';
 import ImageFive from '../../images/image5.png';
 import ImageSix from '../../images/image6.jpg'
-
+import ImageTen from '../../images/image10.png';
 import "./styles.scss";
 
 const portfolioData = [
@@ -47,6 +47,12 @@ const portfolioData = [
         name: "Sustainable Solar LED Lightbulb",
         image: ImageFive,
         link: 'https://github.com/AhmedSabz/SolarLEDProject'
+    },
+    {
+        id:2,
+        name: "Chat Application",
+        image: ImageTen,
+        link: 'https://github.com/AhmedSabz/ChatApp'
     }
 ];
 
