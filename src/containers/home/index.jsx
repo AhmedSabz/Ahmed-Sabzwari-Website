@@ -21,8 +21,9 @@ const Home = () => {
         window.open('https://github.com/AhmedSabz', '_blank');
     };
     const handleNavigateToResume = () => {
-        window.open('https://docs.google.com/document/d/1my4jou_826jtM-ytUY76hiQ8ofx6J9m_nLjSvj1JnTg/edit?usp=sharing', '_blank');
+        window.open('https://docs.google.com/document/d/1my4jou_826jtM-ytUY76hiQ8ofx6J9m_nLjSvj1JnTg/preview', '_blank');
     };
+    
     return (
         <section id="home" className="home">
             <div className="home__image">
