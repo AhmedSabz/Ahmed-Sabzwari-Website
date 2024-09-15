@@ -23,6 +23,10 @@ const Home = () => {
     const handleNavigateToResume = () => {
         window.open('https://docs.google.com/document/d/1my4jou_826jtM-ytUY76hiQ8ofx6J9m_nLjSvj1JnTg/preview', '_blank');
     };
+    const handleNavigateToLeetCode = () => {
+        window.open('https://leetcode.com/u/AhmedSabz/', '_blank');
+    };
+
     
     return (
         <section id="home" className="home">
@@ -63,6 +67,10 @@ const Home = () => {
                     </button>
                     <button onClick={handleNavigateToResume}>
                         Resume
+                    </button>
+                    <button onClick={handleNavigateToLeetCode}>
+                        <FaCode size={20} style={{ marginRight: '8px' }} />
+                        LeetCode
                     </button>
                 </div>
             </Animate>
