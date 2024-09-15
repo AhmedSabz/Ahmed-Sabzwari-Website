@@ -18,7 +18,7 @@ const personalDetails = [
   },
 ];
 
-const JobSummary = "I am a third year Computer Engineering student at San Jose State University searching for summer 2024 internship in software design";
+const JobSummary = "I am a third year Computer Engineering student at San Jose State University searching for fulltime positions in software development";
 
 const About = () => {
   return (
