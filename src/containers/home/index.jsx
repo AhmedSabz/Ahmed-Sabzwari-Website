@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 import { Animate } from 'react-simple-animate';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaCode } from 'react-icons/fa';
 import './styles.scss';
 import ImageSeven from '../../images/image7.png'
 
