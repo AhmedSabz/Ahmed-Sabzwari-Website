@@ -18,6 +18,8 @@ export const skillsData= [
                 skillName: "JAVA",
                 percentage: "85",
             },
+            { skillName: "Python",
+                percentage: "85",},
             {
                 skillName: "Verilog",
                 percentage: "80",
@@ -49,11 +51,19 @@ export const skillsData= [
     label: "Technologies",
     data: [
         {
+            skillName: "Linux",
+            percentage: "95",
+        },
+        {
             skillName: "Arduino",
             percentage: "90",
         },
         {
             skillName: "x86",
+            percentage: "90",
+        },
+        {
+            skillName: "RISC-V",
             percentage: "90",
         },
         {
@@ -68,10 +78,7 @@ export const skillsData= [
             skillName: "LTSpice",
             percentage: "80",
         },
-        {
-            skillName: "Linux",
-            percentage: "60",
-        },
+     
        
        
     ],
